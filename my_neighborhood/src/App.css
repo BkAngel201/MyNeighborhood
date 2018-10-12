@@ -1,28 +1,85 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#mapContainer {
+    width: 100vw;
+    height: 100vh;
+    background: url("images/google-map-background.jpg");
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+
+/***************/
+/*   MARKERS   */
+/***************/
+
+.category-container {
+    margin: 5px 10px;
+    border-left: 5px solid;
+    background: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
-.App-title {
-  font-size: 1.5em;
+/* hospitals */
+#mapContainer img[src*='medical'] {
+     filter: saturate(3000%) hue-rotate(10deg);
+     border: 1px solid white !important;
+}
+div .hospitals {
+    border-color: #c7d600
 }
 
-.App-intro {
-  font-size: large;
+/* banks */
+#mapContainer img[src*='financial'] {
+     filter: saturate(1500%) hue-rotate(107deg) !important;
+     border: 1px solid white !important;
+}
+div .banks {
+    border-color: #5fe0ce
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Fast food */
+#mapContainer img[src*='fastfood'] {
+     filter: saturate(3000%) hue-rotate(250deg);
+     border: 1px solid white !important;
+}
+div .fast.food {
+    border-color: #ff86ff
+}
+
+/* shop */
+#mapContainer img[src*='shop'] {
+     filter: saturate(2000%) hue-rotate(350deg);
+     border: 1px solid white !important;
+}
+div .supermarkets {
+    border-color: #f3c043
+}
+
+
+/* Side Bar */
+.component-side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: #f6f6f6;
+    color: #333;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.component-side-bar header {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 0;
+}
+.component-side-bar header i {
+    margin-right: 15px;
 }
