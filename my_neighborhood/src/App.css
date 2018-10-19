@@ -133,5 +133,15 @@ div .supermarkets .markers-list {
 .markers-list li:hover {
     background-color: #e2dfe2;
     cursor: pointer;
+}
 
+
+/* Break Points */
+@media only screen and (max-width: 600px) {
+    .component-side-bar {
+        width: 100vw;
+        top: 70vh;
+        height: 30vh;
+        overflow: auto;
+    }
 }

@@ -16,6 +16,7 @@ class App extends Component {
             lng: -81.4025024
         },
         markers: [],
+        contentLoaded: false
     }
     mapContainer = null
 
@@ -24,6 +25,7 @@ class App extends Component {
              center: this.state.center,
              zoom: 12,
              mapTypeId: window.google.maps.MapTypeId.ROADMAP,
+             disableDefaultUI: true,
              styles: [{
                  featureType: "poi",
                  stylers: [
