@@ -11,7 +11,8 @@ body {
 }
 
 #mapContainer {
-    width: 100vw;
+    width: calc(100vw - 300px);
+    left: 300px;
     height: 100vh;
     background: url("images/google-map-background.jpg");
 }
@@ -135,6 +136,70 @@ div .supermarkets .markers-list {
     cursor: pointer;
 }
 
+/* Footer */
+.component-side-bar .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 13px;
+    padding-bottom: 5px;
+}
+
+
+/******************/
+/*   InfoWindow   */
+/******************/
+
+.infowindow-title {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px
+}
+
+.infowindow-img {
+    display: inline-block;
+}
+
+.infowindow-img img {
+    width: 100px;
+    height: 150px;
+}
+
+.infowindow-url {
+    padding-top: 10px;
+}
+
+.infowindow-description {
+    width: 150px !important;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    height: 150px;
+    overflow: auto;
+}
+
+.loading-screen {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #f6f6f6;
+    z-index: 3000
+}
+.loading-screen i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 1em;
+    height: 1em;
+    opacity: 0.3;
+}
+
 
 /* Break Points */
 @media only screen and (max-width: 600px) {
@@ -143,5 +208,13 @@ div .supermarkets .markers-list {
         top: 70vh;
         height: 30vh;
         overflow: auto;
+    }
+    #mapContainer {
+        width: 100vw;
+        left: 0;
+        height: 70vh;
+    }
+    .loading-screen i {
+        font-size: 5.3em
     }
 }
