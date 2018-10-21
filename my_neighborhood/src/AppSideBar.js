@@ -29,8 +29,8 @@ class AppSideBar extends Component {
                                 {
                                     this.props.markers.filter((marker) => (
                                         marker.markerType === category
-                                    )).map((marker) => (
-                                        <li tabIndex="0" key={`${category}_${marker.marker.title}`} onClick={() =>(this.triggerClickOnMarker(marker.marker.position.lat, marker.marker.title, marker.marker.map))}>{marker.marker.title}</li>
+                                    )).map((marker, index) => (
+                                        <li tabIndex="0" key={`${category}_${marker.marker.title}_${index}`} onClick={() =>(this.triggerClickOnMarker(marker.marker.position.lat, marker.marker.title, marker.marker.map))}>{marker.marker.title}</li>
                                     ))
                                 }
                                 </ul>

@@ -52,6 +52,10 @@ div .banks .markers-list {
      filter: saturate(3000%) hue-rotate(250deg);
      border: 1px solid white !important;
 }
+#mapContainer img[src*='food'] {
+     filter: saturate(3000%) hue-rotate(250deg);
+     border: 1px solid white !important;
+}
 div .fast.food {
     border-color: rgb(255, 134, 255);
 }
@@ -171,6 +175,9 @@ div .supermarkets .markers-list {
 .infowindow-url {
     padding-top: 10px;
 }
+.infowindow-url i {
+    padding-right: 10px;
+}
 
 .infowindow-description {
     width: 150px !important;
@@ -181,6 +188,7 @@ div .supermarkets .markers-list {
     overflow: auto;
 }
 
+/* Loading Screen */
 .loading-screen {
     position: absolute;
     width: 100vw;
@@ -188,6 +196,7 @@ div .supermarkets .markers-list {
     background: #f6f6f6;
     z-index: 3000
 }
+
 .loading-screen i {
     position: absolute;
     top: 0;
@@ -200,6 +209,66 @@ div .supermarkets .markers-list {
     opacity: 0.3;
 }
 
+/* Location Selector */
+.location-selector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    background: #f6f6f6 url('images/neighborhood.jpg') no-repeat 50% fixed / cover;
+    box-shadow: inset 0px 0px 10000px 10px rgb(0,0,0);
+}
+
+.location-selector .input-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 100px;
+}
+
+.location-selector input,
+.location-selector button {
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 20px #333;
+}
+
+.location-selector input {
+    padding: 10px 15px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: inherit;
+    margin-bottom: 30px;
+}
+
+.location-selector input::placeholder {
+    opacity: .7
+}
+
+.location-selector button {
+    border: 2px solid rgb(93, 151, 224);
+    background: rgb(0, 95, 214);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.location-selector button:hover {
+    border-color: rgb(81, 131, 193);
+    background: rgb(2, 75, 167);
+}
 
 /* Break Points */
 @media only screen and (max-width: 600px) {
@@ -209,12 +278,19 @@ div .supermarkets .markers-list {
         height: 30vh;
         overflow: auto;
     }
+
     #mapContainer {
         width: 100vw;
         left: 0;
         height: 70vh;
     }
+
     .loading-screen i {
         font-size: 5.3em
+    }
+    /* Footer */
+    .component-side-bar .footer {
+        position: relative;
+        padding-top: 10px;
     }
 }
